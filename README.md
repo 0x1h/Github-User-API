@@ -17,5 +17,5 @@ Website Uses **Github API**
 
 ## Configuration
 
-make sure setup node LTS, and launch **lite-server**, run in terminal `npm start`, if you will change something I would recommend you tu run in another terminal
+make sure setup node LTS, and launch **lite-server**, run in terminal `npm start`, if you will change something I would recommend you tu run in another terminaldasd
 `tsc --watch`
