@@ -30,7 +30,6 @@ class UserAPI {
 
     this.repos.forEach(function(element: any){
         const userReposSpan = document.createElement('span');
-        userReposSpan.setAttribute('data-border', '')
 
         repo_cont.appendChild(userReposSpan)
         userReposSpan.innerText = element.name
