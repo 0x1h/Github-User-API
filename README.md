@@ -19,3 +19,4 @@ Website Uses **Github API**
 
 make sure setup node LTS, and launch **lite-server**, run in terminal `npm start`, if you will change something I would recommend you tu run in another terminal
 `tsc --watch`
+adasdad
