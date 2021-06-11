@@ -1,0 +1,16 @@
+$bg-color: #23272a;
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%user-Stats {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #1fa19d;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    @extend %flex;
+}

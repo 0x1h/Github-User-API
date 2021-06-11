@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+main .data .data-conatiner .user-stats .Followers .fol-num,
+main .data .data-conatiner .user-stats .Followers .foll-num,
+main .data .data-conatiner .user-stats .Following .fol-num,
+main .data .data-conatiner .user-stats .Following .foll-num, .container, .user-card .form-box, main .user-profile, main .data, main .data .data-conatiner .user-stats .Followers,
+main .data .data-conatiner .user-stats .Following {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .data .data-conatiner .user-stats .Followers .fol-num,
+main .data .data-conatiner .user-stats .Followers .foll-num,
+main .data .data-conatiner .user-stats .Following .fol-num,
+main .data .data-conatiner .user-stats .Following .foll-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #1fa19d;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen";
+  text-decoration: none;
+}
+
+body {
+  background: #23272a;
+  padding: 0 20px;
+}
+
+header {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 710px) {
+  header {
+    display: none;
+  }
+}
+
+header h2 {
+  color: #fff;
+}
+
+header img {
+  width: 70px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.user-card {
+  width: 850px;
+  height: 500px;
+  background: #2c2f33;
+  border-radius: 3.125rem;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 710px) {
+  .user-card {
+    width: 400px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .user-card {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 371px) {
+  .user-card {
+    width: 300px;
+  }
+}
+
+.user-card .form-box .form-field {
+  border-radius: 50px;
+  margin-top: 10px;
+  background: #fff;
+  width: 600px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  border: 3px solid #1fa19d;
+}
+
+.user-card .form-box .form-field form {
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.user-card .form-box .form-field form input {
+  width: 84%;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.user-card .form-box .form-field form button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-self: flex-end;
+  outline: none;
+  border: none;
+  background: #1fa19d;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.user-card .form-box .form-field form button:active {
+  background: #1a6865;
+}
+
+.main-container {
+  height: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 90%;
+}
+
+@media screen and (max-width: 710px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+main .user-profile {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 710px) {
+  main .user-profile {
+    margin-top: 10px;
+  }
+}
+
+main .user-profile img {
+  height: 200px;
+  width: 200px;
+  border: 5px solid #1fa19d;
+  border-radius: 50%;
+}
+
+main .user-profile p {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+main .data .data-conatiner {
+  width: 100%;
+  height: 250px;
+}
+
+main .data .data-conatiner .user-stats {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 30px;
+}
+
+main .data .data-conatiner .user-stats .Followers p,
+main .data .data-conatiner .user-stats .Following p {
+  color: #fff;
+}
+
+main .data .data-conatiner .user-stats .Followers .foll-num,
+main .data .data-conatiner .user-stats .Following .foll-num {
+  margin-right: 70px;
+}
+
+.repo-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.repo-container span {
+  margin-top: 7px;
+  margin-right: 3px;
+  color: #fff;
+  padding: 4px;
+  background: #1fa19d;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=style.css.map */
