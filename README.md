@@ -12,7 +12,7 @@ Website Uses **Github API**
 * **HTML**
 
 * **SCSS**
-adasd
+* 
 * **Typescript** 
 
 ## Configuration
