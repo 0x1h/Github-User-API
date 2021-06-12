@@ -1,7 +1,7 @@
 # Github-User-API
 Github User Tracker, written in Typescript
 
-## Instruction
+## Instruction asdsad
 
 input name in search field and after enter, you will track data of user, only **Followers, Followings and Repositories** 
 
