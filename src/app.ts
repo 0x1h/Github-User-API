@@ -69,11 +69,11 @@ class UserAPI {
 }
 
 const fetchData = async (userName: string | null) => {  
-    const fetchUser: any = await fetch(USER_API + userName)
+    const fetchUser: Response = await fetch(USER_API + userName)
     const dataJSON: any = await fetchUser.json()
 
     const repositories: any = await fetch(dataJSON.repos_url)
-    const repositories_names: any = await repositories.json()
+    const repositories_names: string[] = await repositories.json()
 
     const userAPI = new UserAPI(dataJSON.followers, dataJSON.following, dataJSON.login, dataJSON.avatar_url, repositories_names)
     userAPI.generateUser()
