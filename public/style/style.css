@@ -4,9 +4,15 @@ main .data .data-conatiner .user-stats .Followers .foll-num,
 main .data .data-conatiner .user-stats .Following .fol-num,
 main .data .data-conatiner .user-stats .Following .foll-num, .container, .user-card .form-box, main .user-profile, main .data, main .data .data-conatiner .user-stats .Followers,
 main .data .data-conatiner .user-stats .Following {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .data .data-conatiner .user-stats .Followers .fol-num,
@@ -25,7 +31,8 @@ main .data .data-conatiner .user-stats .Following .foll-num {
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Oxygen";
   text-decoration: none;
 }
@@ -37,11 +44,16 @@ body {
 
 header {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 300px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
 }
 
@@ -97,15 +109,25 @@ header img {
   background: #fff;
   width: 600px;
   height: 50px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 3px solid #1fa19d;
 }
 
 .user-card .form-box .form-field form {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -129,6 +151,7 @@ header img {
   border: none;
   background: #1fa19d;
   cursor: pointer;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -141,19 +164,25 @@ header img {
 }
 
 main {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 300px 1fr;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
   height: 90%;
 }
 
 @media screen and (max-width: 710px) {
   main {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
 main .user-profile {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (max-width: 710px) {
@@ -167,6 +196,7 @@ main .user-profile img {
   width: 200px;
   border: 5px solid #1fa19d;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 main .user-profile p {
@@ -185,9 +215,15 @@ main .data .data-conatiner {
 main .data .data-conatiner .user-stats {
   margin-top: 5px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   height: 30px;
 }
@@ -203,8 +239,11 @@ main .data .data-conatiner .user-stats .Following .foll-num {
 }
 
 .repo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .repo-container span {

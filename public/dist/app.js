@@ -1,5 +1,4 @@
 "use strict";
-const btn = document.querySelector("button");
 const input = document.querySelector("input");
 const form = document.querySelector("form");
 const mainContainer = document.querySelector(".main-container");
@@ -28,16 +27,13 @@ class UserAPI {
     generateUser() {
         const main = document.createElement("main");
         mainContainer.appendChild(main);
-        btn.addEventListener('click', () => {
+        form.addEventListener('submit', (e) => {
             main.remove();
-        });
-        window.addEventListener('keyup', (e) => {
-            if (e.keyCode === keyCode.Enter)
-                main.remove();
+            e.preventDefault();
         });
         main.innerHTML = `
 <div class="user-profile">
-    <img src="${this.userAvatar} data-border" style='cursor: pointer' />
+    <img src="${this.userAvatar} data-border" />
     <p>${this.userName}</p>
 </div>
 <div class="data">
@@ -66,27 +62,20 @@ const fetchData = async (userName) => {
     const repositories = await fetch(dataJSON.repos_url);
     const repositories_names = await repositories.json();
     const userAPI = new UserAPI(dataJSON.followers, dataJSON.following, dataJSON.login, dataJSON.avatar_url, repositories_names);
-    const promise = new Promise((resolve, reject) => {
-        if (dataJSON.login !== undefined) {
-            resolve('Search Github User');
-            userAPI.generateUser();
-            userAPI.fetchRepos();
-        }
-        else {
-            reject('User name Doesnt Exist');
-        }
-    });
-    promise.then(response => input.setAttribute('placeholder', String(response)))
-        .catch(err => {
-        input.setAttribute('placeholder', `${err}`);
-    });
+    userAPI.generateUser();
+    userAPI.fetchRepos();
 };
 const outputData = () => {
+    localStorage.setItem("user", input.value);
     fetchData(input.value);
-    input.value = '';
+    input.value = "";
 };
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
     outputData();
+    e.preventDefault();
+});
+window.addEventListener("load", () => {
+    const user = localStorage.getItem("user");
+    fetchData(user);
 });
 //# sourceMappingURL=app.js.map
