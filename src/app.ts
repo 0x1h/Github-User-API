@@ -1,34 +1,34 @@
 const btn = document.querySelector("button") as HTMLButtonElement;
 const input = document.querySelector("input") as HTMLInputElement;
+const form = document.querySelector("form") as HTMLFormElement
+
+const mainContainer = document.querySelector(".main-container") as HTMLDivElement;
 
 const USER_API: string = "https://api.github.com/users/";
 
 enum keyCode {Enter = 13}
-
-const mainContainer = document.querySelector(".main-container") as HTMLDivElement;
-
 class UserAPI {
-  follower: number;
-  following: number;
-  userName: string;
-  userAvatar: string;
-  repos: any
+  public follower: number;
+  public following: number;
+  public userName: string;
+  public  userAvatar: string;
+  public repos: string[] 
 
   main: any
 
-  constructor(follower: number, following: number, userName: string, userAvatar: string, repos: any) {
+  constructor(follower: number, following: number, userName: string, userAvatar: string, repos: string[]) {
     this.follower = follower;
     this.following = following;
     this.userName = userName;
     this.userAvatar = userAvatar
     this.repos = repos
-
     this.main;
   }
+
   fetchRepos(){
     const repo_cont = document.querySelector('.repo-container') as HTMLDivElement
 
-    this.repos.forEach(function(element: any){
+    this.repos.forEach(element => {
         const userReposSpan = document.createElement('span');
 
         repo_cont.appendChild(userReposSpan)
@@ -102,10 +102,8 @@ const outputData = () => {
     input.value = ''
 }
 
-window.addEventListener('keyup', (e: any)=> {
-    if(e.keyCode === keyCode.Enter){
-        outputData()
-    }
-})
+form.addEventListener("submit", (e)=> {
+    e.preventDefault()
 
-btn.addEventListener('click', outputData)
+    outputData()
+})

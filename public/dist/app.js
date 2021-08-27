@@ -2,12 +2,12 @@
 const btn = document.querySelector("button");
 const input = document.querySelector("input");
 const form = document.querySelector("form");
+const mainContainer = document.querySelector(".main-container");
 const USER_API = "https://api.github.com/users/";
 var keyCode;
 (function (keyCode) {
     keyCode[keyCode["Enter"] = 13] = "Enter";
 })(keyCode || (keyCode = {}));
-const mainContainer = document.querySelector(".main-container");
 class UserAPI {
     constructor(follower, following, userName, userAvatar, repos) {
         this.follower = follower;
