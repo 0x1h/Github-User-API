@@ -1,3 +1,4 @@
+
 const btn = document.querySelector("button") as HTMLButtonElement;
 const input = document.querySelector("input") as HTMLInputElement;
 const form = document.querySelector("form") as HTMLFormElement
@@ -73,6 +74,7 @@ class UserAPI {
   }
 }
 
+
 const fetchData = async (userName: string) => {  
     const fetchUser: any = await fetch(USER_API + userName)
     const dataJSON: any = await fetchUser.json()
@@ -102,7 +104,7 @@ const outputData = () => {
     input.value = ''
 }
 
-form.addEventListener("submit", (e)=> {
+form.addEventListener("submit", (e) => {
     e.preventDefault()
 
     outputData()
