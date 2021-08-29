@@ -4,7 +4,6 @@ const mainContainer = document.querySelector(".main-container") as HTMLDivElemen
 
 const USER_API: string = "https://api.github.com/users/";
 
-enum keyCode {Enter = 13}
 class UserAPI {
   public follower: number;
   public following: number;
