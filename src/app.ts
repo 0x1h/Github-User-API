@@ -48,6 +48,7 @@ class UserAPI implements UserInterface {
       userReposSpan.innerText = element.name;
     });
   }
+
   generateUser() {
     const main = document.createElement("main");
     mainContainer.appendChild(main);
@@ -110,3 +111,4 @@ window.addEventListener("load", () => {
     const user = localStorage.getItem("user")
     fetchData(user)
 })
+//
