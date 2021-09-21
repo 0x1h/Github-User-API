@@ -4,42 +4,58 @@ const mainContainer = document.querySelector(".main-container") as HTMLDivElemen
 
 const USER_API: string = "https://api.github.com/users/";
 
-class UserAPI {
-  public follower: number;
-  public following: number;
-  public userName: string;
-  public  userAvatar: string;
-  public repos: string[] 
+interface UserInterface {
+  follower: number;
+  following: number;
+  userName: string;
+  userAvatar: string;
+  repos: string[];
+  main: any;
+}
 
-  main: any
+class UserAPI implements UserInterface {
+  follower: number;
+  following: number;
+  userName: string;
+  userAvatar: string;
+  repos: string[];
+  main: any;
 
-  constructor(follower: number, following: number, userName: string, userAvatar: string, repos: string[]) {
+  constructor(
+    follower: number,
+    following: number,
+    userName: string,
+    userAvatar: string,
+    repos: string[]
+  ) {
     this.follower = follower;
     this.following = following;
     this.userName = userName;
-    this.userAvatar = userAvatar
-    this.repos = repos
+    this.userAvatar = userAvatar;
+    this.repos = repos;
     this.main;
   }
 
-  fetchRepos(){
-    const repo_cont = document.querySelector('.repo-container') as HTMLDivElement
+  fetchRepos() {
+    const repo_cont = document.querySelector(
+      ".repo-container"
+    ) as HTMLDivElement;
 
-    this.repos.forEach(element => {
-        const userReposSpan = document.createElement('span');
+    this.repos.forEach((element) => {
+      const userReposSpan = document.createElement("span");
 
-        repo_cont.appendChild(userReposSpan)
-        userReposSpan.innerText = element.name
+      repo_cont.appendChild(userReposSpan);
+      userReposSpan.innerText = element.name;
     });
   }
   generateUser() {
     const main = document.createElement("main");
     mainContainer.appendChild(main);
 
-    form.addEventListener('submit', (e)=> {
-        main.remove()
-        e.preventDefault()
-    })
+    form.addEventListener("submit", (e) => {
+      main.remove();
+      e.preventDefault();
+    });
 
     main.innerHTML = `
 <div class="user-profile">
