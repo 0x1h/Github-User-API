@@ -10,23 +10,17 @@ interface UserInterface {
   userName: string;
   userAvatar: string;
   repos: string[];
-  main: any;
 }
 
 class UserAPI implements UserInterface {
-  follower: number;
-  following: number;
-  userName: string;
-  userAvatar: string;
-  repos: string[];
-  main: any;
+  public main: any;
 
   constructor(
-    follower: number,
-    following: number,
-    userName: string,
-    userAvatar: string,
-    repos: string[]
+    public follower: number,
+    public following: number,
+    public userName: string,
+    public userAvatar: string,
+    public repos: string[]
   ) {
     this.follower = follower;
     this.following = following;
@@ -111,4 +105,3 @@ window.addEventListener("load", () => {
     const user = localStorage.getItem("user")
     fetchData(user)
 })
-//
